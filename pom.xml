@@ -79,7 +79,7 @@
 		<repository>
 			<id>JemmaRepository</id>
 			<name>JEMMA Maven repository</name>
-			<url>http://tinwor.github.io/jemma-maven-repository/maven</url>
+			<url>http://ismb.github.io/jemma-maven-repository/maven</url>
 		</repository>
 	</repositories>
 	<dependencies>
