@@ -28,8 +28,7 @@ import org.energy_home.jemma.ah.hac.lib.DriverApplianceFactory;
 public class ZclIASZoneApplianceFactory extends DriverApplianceFactory implements Driver {
 	public static final String APPLIANCE_TYPE = "org.energy_home.jemma.ah.zigbee.iaszone";
 	public static final String APPLIANCE_FRIENDLY_NAME = "IASZone";
-	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null,
-			APPLIANCE_FRIENDLY_NAME);
+	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null, APPLIANCE_FRIENDLY_NAME);
 
 	public IApplianceDescriptor getDescriptor() {
 		return APPLIANCE_DESCRIPTOR;

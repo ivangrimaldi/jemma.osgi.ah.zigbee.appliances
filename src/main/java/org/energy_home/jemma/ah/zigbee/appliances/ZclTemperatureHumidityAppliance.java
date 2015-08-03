@@ -31,7 +31,8 @@ import org.slf4j.LoggerFactory;
 
 public class ZclTemperatureHumidityAppliance extends ZclAppliance {
 	private ZclEndPoint endPoint = null;
-	private static final Logger LOG = LoggerFactory.getLogger( ZclTemperatureHumidityAppliance.class );
+	private static final Logger LOG = LoggerFactory.getLogger(ZclTemperatureHumidityAppliance.class);
+
 	public ZclTemperatureHumidityAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
 		endPoint = this.zclAddEndPoint(IEndPointTypes.ZIGBEE_TEMPERATURE_SENSOR);

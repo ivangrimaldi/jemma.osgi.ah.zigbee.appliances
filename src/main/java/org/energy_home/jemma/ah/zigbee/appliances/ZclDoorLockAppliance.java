@@ -19,27 +19,24 @@ import org.energy_home.jemma.ah.zigbee.zcl.lib.ZclEndPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ZclDoorLockAppliance extends ZclAppliance{
+public class ZclDoorLockAppliance extends ZclAppliance {
 
 	private ZclEndPoint endPoint = null;
-	
-	private static final Logger LOG = LoggerFactory.getLogger( ZclDoorLockAppliance.class );
-	
-	public ZclDoorLockAppliance(String pid, Dictionary config)
-			throws ApplianceException {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ZclDoorLockAppliance.class);
+
+	public ZclDoorLockAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
 		endPoint = this.zclAddEndPoint(IEndPointTypes.ZIGBEE_DOOR_LOCK);
 		// Server Clusters
 		endPoint.addServiceCluster(new ZclDoorLockServer());
 		endPoint.addServiceCluster(new ZclBasicServer());
 		endPoint.addServiceCluster(new ZclIdentifyServer());
-		//endPoint.addServiceCluster(new ZclIdentifyClient());
+		// endPoint.addServiceCluster(new ZclIdentifyClient());
 		endPoint.addServiceCluster(new ZclScenesServer());
 		endPoint.addServiceCluster(new ZclGroupsServer());
-		
-		
+
 	}
-	
 
 	protected void attached() {
 		LOG.debug("ZclDoorLockAppliance attached");
@@ -48,6 +45,5 @@ public class ZclDoorLockAppliance extends ZclAppliance{
 	protected void detached() {
 		LOG.debug("ZclDoorLockAppliance detached");
 	}
-
 
 }

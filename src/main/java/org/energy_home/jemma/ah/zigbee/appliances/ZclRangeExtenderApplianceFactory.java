@@ -28,8 +28,7 @@ import org.osgi.service.device.Driver;
 public class ZclRangeExtenderApplianceFactory extends DriverApplianceFactory implements Driver {
 	public static final String APPLIANCE_TYPE = "org.energy_home.jemma.ah.zigbee.rangeextender";
 	public static final String APPLIANCE_FRIENDLY_NAME = "RangeExtender";
-	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null,
-			APPLIANCE_FRIENDLY_NAME);
+	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null, APPLIANCE_FRIENDLY_NAME);
 
 	public IApplianceDescriptor getDescriptor() {
 		return APPLIANCE_DESCRIPTOR;

@@ -15,8 +15,7 @@ public class ZclUbisysDrimmerSwitchApplianceFactory extends DriverApplianceFacto
 	public static final String APPLIANCE_FRIENDLY_NAME = "Drimmer Switch";
 	public static final String DEVICE_TYPE = "ZigBee";
 
-	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null,
-			APPLIANCE_FRIENDLY_NAME);
+	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null, APPLIANCE_FRIENDLY_NAME);
 
 	public IApplianceDescriptor getDescriptor() {
 		return APPLIANCE_DESCRIPTOR;

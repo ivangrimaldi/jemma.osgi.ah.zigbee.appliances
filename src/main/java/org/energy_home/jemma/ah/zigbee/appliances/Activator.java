@@ -31,37 +31,38 @@ public class Activator implements BundleActivator {
 		applicationFactories.add(new ZclBitronhomeSmartPlugApplianceFactory());
 		applicationFactories.add(new ZclBitronhomeRemoteControlApplianceFactory());
 		applicationFactories.add(new ZclURMETTemperatureHumidityApplianceFactory());
-		/*Marco da inserire LDAP corretto*/
-		//applicationFactories.add(new ZclURMETSmokeDetectorSirenApplianceFactory());
+		/* Marco da inserire LDAP corretto */
+		// applicationFactories.add(new
+		// ZclURMETSmokeDetectorSirenApplianceFactory());
 		/**
-		 * Ends bitronhome 
+		 * Ends bitronhome
 		 */
 		// applicationFactories.add(new ZigbeeWhiteGoodApplianceFactory());
 		applicationFactories.add(new ZigbeeMeteringApplianceFactory());
-		
-		/*Marco, il driver sottostante è errato*/
-		//applicationFactories.add(new ZclZinApplianceFactory());
+
+		/* Marco, il driver sottostante è errato */
+		// applicationFactories.add(new ZclZinApplianceFactory());
 		// applicationFactories.add(new Zcl4NoksSmartPlugApplianceFactory());
 		applicationFactories.add(new ZclSmartPlugApplianceFactory());
 		applicationFactories.add(new ZclThermostatApplianceFactory());
 		applicationFactories.add(new Zcl4NoksThermostatApplianceFactory());
 		applicationFactories.add(new ZclRangeExtenderApplianceFactory());
-		//applicationFactories.add(new ZclDimmableLightApplianceFactory());
+		// applicationFactories.add(new ZclDimmableLightApplianceFactory());
 		applicationFactories.add(new ZclColorLightApplianceFactory());
 		applicationFactories.add(new ZclIASZoneApplianceFactory());
-		
-		/*Marco*/
+
+		/* Marco */
 		applicationFactories.add(new ZclUbisysDimmableLightApplianceFactory());
 		applicationFactories.add(new ZclUbisysDrimmerSwitchApplianceFactory());
 		applicationFactories.add(new ZclWindowCoveringApplianceFactory());
-		//applicationFactories.add(new ZclWindowCoveringControllerApplianceFactory());
+		// applicationFactories.add(new
+		// ZclWindowCoveringControllerApplianceFactory());
 		applicationFactories.add(new ZclDoorLockApplianceFactory());
 		applicationFactories.add(new ZigbeeWhiteGoodApplianceFactory());
 		applicationFactories.add(new ZclWulianTemperatureHumidityApplianceFactory());
-		
-		/*End Marco*/
 
-		
+		/* End Marco */
+
 		Iterator it = applicationFactories.iterator();
 
 		while (it.hasNext()) {

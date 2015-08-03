@@ -31,9 +31,8 @@ import org.slf4j.LoggerFactory;
 public class ZclThermostatAppliance extends ZclAppliance {
 	private ZclEndPoint endPoint = null;
 
-	private static final Logger LOG = LoggerFactory.getLogger( ZclThermostatAppliance.class );
+	private static final Logger LOG = LoggerFactory.getLogger(ZclThermostatAppliance.class);
 
-	
 	public ZclThermostatAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
 

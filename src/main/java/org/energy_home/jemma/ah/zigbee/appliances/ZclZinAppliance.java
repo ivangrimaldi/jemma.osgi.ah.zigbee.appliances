@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
 public class ZclZinAppliance extends ZclAppliance {
 	private ZclEndPoint endPoint = null;
 
-	private static final Logger LOG = LoggerFactory.getLogger( ZclZinAppliance.class );
+	private static final Logger LOG = LoggerFactory.getLogger(ZclZinAppliance.class);
 
 	/*
 	 * try { IAppliance[] appliances =

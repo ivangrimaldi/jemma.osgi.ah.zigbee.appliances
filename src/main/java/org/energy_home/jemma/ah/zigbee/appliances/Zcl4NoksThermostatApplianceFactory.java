@@ -32,8 +32,7 @@ public class Zcl4NoksThermostatApplianceFactory extends DriverApplianceFactory i
 	public static final String APPLIANCE_FRIENDLY_NAME = "Termostat";
 	public static final String DEVICE_TYPE = "ZigBee";
 
-	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null,
-			APPLIANCE_FRIENDLY_NAME);
+	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null, APPLIANCE_FRIENDLY_NAME);
 
 	public IApplianceDescriptor getDescriptor() {
 		return APPLIANCE_DESCRIPTOR;
@@ -47,5 +46,4 @@ public class Zcl4NoksThermostatApplianceFactory extends DriverApplianceFactory i
 		return "(&(DEVICE_CATEGORY=ZigBee)(zigbee.device.device.id=769))";
 	}
 
-	
 }

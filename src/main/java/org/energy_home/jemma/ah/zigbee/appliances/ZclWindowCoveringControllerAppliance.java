@@ -21,14 +21,13 @@ import org.energy_home.jemma.ah.zigbee.zcl.lib.ZclEndPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ZclWindowCoveringControllerAppliance extends ZclAppliance{
+public class ZclWindowCoveringControllerAppliance extends ZclAppliance {
 
 	private ZclEndPoint endPoint = null;
-	
-	private static final Logger LOG = LoggerFactory.getLogger( ZclWindowCoveringControllerAppliance.class );
-	
-	public ZclWindowCoveringControllerAppliance(String pid, Dictionary config)
-			throws ApplianceException {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ZclWindowCoveringControllerAppliance.class);
+
+	public ZclWindowCoveringControllerAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
 
 		endPoint = this.zclAddEndPoint(IEndPointTypes.ZIGBEE_WINDOW_COVERING_CONTROLLER);
@@ -36,11 +35,10 @@ public class ZclWindowCoveringControllerAppliance extends ZclAppliance{
 		// Server Clusters
 		endPoint.addServiceCluster(new ZclBasicServer());
 		endPoint.addServiceCluster(new ZclIdentifyServer());
-		//Client Server
+		// Client Server
 		endPoint.addServiceCluster(new ZclWindowCoveringClient());
-		
+
 	}
-	
 
 	protected void attached() {
 		LOG.debug("ZclWindowCoveringControllerAppliance attached");
@@ -49,6 +47,5 @@ public class ZclWindowCoveringControllerAppliance extends ZclAppliance{
 	protected void detached() {
 		LOG.debug("ZclWindowCoveringControllerAppliance detached");
 	}
-
 
 }

@@ -21,14 +21,13 @@ import org.energy_home.jemma.ah.zigbee.zcl.lib.ZclEndPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ZclUbisysDimmableLightAppliance extends ZclAppliance{
+public class ZclUbisysDimmableLightAppliance extends ZclAppliance {
 
 	private ZclEndPoint endPoint = null;
-	
-	private static final Logger LOG = LoggerFactory.getLogger( ZclUbisysDimmableLightAppliance.class );
-	
-	public ZclUbisysDimmableLightAppliance(String pid, Dictionary config)
-			throws ApplianceException {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ZclUbisysDimmableLightAppliance.class);
+
+	public ZclUbisysDimmableLightAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
 		endPoint = this.zclAddEndPoint(IEndPointTypes.ZIGBEE_DIMMABLE_LIGHT);
 		// Server Clusters
@@ -38,20 +37,19 @@ public class ZclUbisysDimmableLightAppliance extends ZclAppliance{
 		endPoint.addServiceCluster(new ZclScenesServer());
 		endPoint.addServiceCluster(new ZclOnOffServer());
 		endPoint.addServiceCluster(new ZclLevelControlServer());
-		//endPoint.addServiceCluster();0x0301
-		//endPoint.addServiceCluster();0xFC01
+		// endPoint.addServiceCluster();0x0301
+		// endPoint.addServiceCluster();0xFC01
 		ConfigServer serviceCluster = (ConfigServer) this.getEndPoint(0).getServiceCluster("org.energy_home.jemma.ah.cluster.ah.ConfigServer");
 		if (serviceCluster != null) {
 			try {
 				if (serviceCluster.getIconName(null) == null) {
-					//serviceCluster.setIconName("lampadina.png", null);
+					// serviceCluster.setIconName("lampadina.png", null);
 				}
 			} catch (ServiceClusterException e) {
-				
+
 			}
 		}
 	}
-	
 
 	protected void attached() {
 		LOG.debug("ZclUbisysDimmableLightAppliance attached");
@@ -60,6 +58,5 @@ public class ZclUbisysDimmableLightAppliance extends ZclAppliance{
 	protected void detached() {
 		LOG.debug("ZclUbisysDimmableLightAppliance detached");
 	}
-
 
 }

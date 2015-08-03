@@ -15,8 +15,7 @@ public class ZclDoorLockApplianceFactory extends DriverApplianceFactory implemen
 	public static final String APPLIANCE_FRIENDLY_NAME = "Door Lock";
 	public static final String DEVICE_TYPE = "ZigBee";
 
-	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null,
-			APPLIANCE_FRIENDLY_NAME);
+	public static final IApplianceDescriptor APPLIANCE_DESCRIPTOR = new ApplianceDescriptor(APPLIANCE_TYPE, null, APPLIANCE_FRIENDLY_NAME);
 
 	public IApplianceDescriptor getDescriptor() {
 		return APPLIANCE_DESCRIPTOR;

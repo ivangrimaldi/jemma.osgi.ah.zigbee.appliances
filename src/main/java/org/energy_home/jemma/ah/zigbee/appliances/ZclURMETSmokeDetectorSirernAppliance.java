@@ -36,8 +36,8 @@ public class ZclURMETSmokeDetectorSirernAppliance extends ZclAppliance {
 
 	private ZclIASZoneServer iasZoneServer;
 
-	//FIXME mass-rename log to LOG for consistancy
-	private static final Logger log = LoggerFactory.getLogger( ZclURMETSmokeDetectorSirernAppliance.class );
+	// FIXME mass-rename log to LOG for consistancy
+	private static final Logger log = LoggerFactory.getLogger(ZclURMETSmokeDetectorSirernAppliance.class);
 
 	public ZclURMETSmokeDetectorSirernAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
@@ -45,8 +45,8 @@ public class ZclURMETSmokeDetectorSirernAppliance extends ZclAppliance {
 		endPoint = this.zclAddEndPoint(IEndPointTypes.ZIGBEE_IAS_ZONE);
 		endPoint.addServiceCluster(new ZclBasicServer());
 		endPoint.addServiceCluster(new ZclIdentifyServer());
-		
-//		endPoint.addServiceCluster(new ZclURMETIASWDServer());
+
+		// endPoint.addServiceCluster(new ZclURMETIASWDServer());
 		iasZoneServer = (ZclIASZoneServer) endPoint.addServiceCluster(new ZclIASZoneServer());
 	}
 
@@ -65,11 +65,11 @@ public class ZclURMETSmokeDetectorSirernAppliance extends ZclAppliance {
 				case 0x0015:
 					log.debug("This is a Contact Switch IASZone Device");
 					break;
-					
+
 				case 0x002a:
 					log.debug("This is a Water Sensor IASZone Device");
 					break;
-					
+
 				default:
 					log.error("unknown Zone Type: " + zoneType);
 					break;

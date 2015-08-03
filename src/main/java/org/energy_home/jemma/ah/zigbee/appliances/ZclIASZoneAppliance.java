@@ -39,7 +39,7 @@ public class ZclIASZoneAppliance extends ZclAppliance {
 
 	private ZclIASZoneServer iasZoneServer;
 
-	private static final Logger LOG = LoggerFactory.getLogger( ZclIASZoneAppliance.class );
+	private static final Logger LOG = LoggerFactory.getLogger(ZclIASZoneAppliance.class);
 
 	public ZclIASZoneAppliance(String pid, Dictionary config) throws ApplianceException {
 		super(pid, config);
@@ -73,11 +73,11 @@ public class ZclIASZoneAppliance extends ZclAppliance {
 				// TODO attention the following call may block the attached()
 				// method. Therefore it should be asynchronous.
 				int zoneType = iasZoneServer.getZoneType(null);
-				switch (zoneType) { //FIXME magic numbers ?
+				switch (zoneType) { // FIXME magic numbers ?
 				case 0x0015:
 					LOG.debug("This is a Contact Switch IASZone Device");
 					break;
-					
+
 				case 0x002a:
 					LOG.debug("This is a Water Sensor IASZone Device");
 					break;
@@ -86,7 +86,7 @@ public class ZclIASZoneAppliance extends ZclAppliance {
 					break;
 				}
 			} catch (ApplianceException e) {
-				LOG.error("exception while reading ZoneType attribute. " + e.getMessage(),e);
+				LOG.error("exception while reading ZoneType attribute. " + e.getMessage(), e);
 			}
 		}
 	}
