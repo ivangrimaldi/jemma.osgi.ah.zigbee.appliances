@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1438598138155
-Build-Jdk: 1.8.0_45
-Built-By: tomasi
+Bnd-LastModified: 1438861058677
+Build-Jdk: 1.8.0_31
+Built-By: 11621035
 Bundle-Activator: org.energy_home.jemma.ah.zigbee.appliances.Activator
-Bundle-Category: Automation@Home
+Bundle-Category: JEMMA Automation@Home
 Bundle-ManifestVersion: 2
 Bundle-Name: ZigBee Appliances
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Bundle-SymbolicName: org.energy-home.jemma.osgi.ah.zigbee.appliances
+Bundle-SymbolicName: jemma.osgi.ah.zigbee.appliances
 Bundle-Vendor: Telecom Italia
-Bundle-Version: 1.0.3
+Bundle-Version: 1.0.5
 Created-By: Apache Maven Bundle Plugin
 Import-Package: org.energy_home.jemma.ah.cluster.ah;version="[3.0,4)",or
  g.energy_home.jemma.ah.hac.lib;version="[3.0.0,3.1.0)",org.energy_home.
@@ -25,8 +25,8 @@ Import-Package: org.energy_home.jemma.ah.cluster.ah;version="[3.0,4)",or
  ster.measurement;version="[3.0,4)",org.energy_home.jemma.ah.zigbee.zcl.
  cluster.metering;version="[3.1,4)",org.energy_home.jemma.ah.zigbee.zcl.
  cluster.security;version="[3.0,4)",org.energy_home.jemma.ah.zigbee.zcl.
- cluster.zll;version="[1.0,2)",org.osgi.service.cm;version="[1.3,2)",org
- .energy_home.jemma.ah.zigbee,org.energy_home.jemma.ah.cluster.zigbee.se
+ cluster.zll;version="[1.0,2)",org.energy_home.jemma.ah.zigbee,org.osgi.
+ service.cm;version="[1.3,2)",org.energy_home.jemma.ah.cluster.zigbee.se
  curity;version="[3.0,4)"
 Require-Bundle: jemma.osgi.ah.hac.lib
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
