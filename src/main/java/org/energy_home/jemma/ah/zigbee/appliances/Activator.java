@@ -60,6 +60,7 @@ public class Activator implements BundleActivator {
 		applicationFactories.add(new ZclDoorLockApplianceFactory());
 		applicationFactories.add(new ZigbeeWhiteGoodApplianceFactory());
 		applicationFactories.add(new ZclWulianTemperatureHumidityApplianceFactory());
+		applicationFactories.add(new ZclDevelcoExternalMeterApplianceFactory());
 
 		/* End Marco */
 
